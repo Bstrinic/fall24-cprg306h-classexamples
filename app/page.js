@@ -30,6 +30,24 @@ export default function Home() {
             Week 3 - Props
           </Link>
         </li>
+        <li>
+          <Link
+            className={linkStyles} href="./week-4/functions">
+            Week 4 - Functions
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={linkStyles} href="./week-4/counter">
+            Week 4 - Counter
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={linkStyles} href="./week-5/">
+            Week 5 - Managed Forms
+          </Link>
+        </li>
       </ul>
     </main>
   );
