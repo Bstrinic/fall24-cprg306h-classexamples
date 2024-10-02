@@ -1,11 +1,11 @@
-import { Main } from "next/document";
+
 import ContactForm from "./managed-form";
 
 export default function ContactPage() {
     return(
-        <Main>
+        <main>
             <h1>Contact Us!</h1>
             <ContactForm />
-        </Main>
+        </main>
     )
 }
