@@ -50,8 +50,8 @@ export default function Home() {
         </li>
         <li>
           <Link
-            className={linkStyles} href="./week-6/">
-            Week 6 - 
+            className={linkStyles} href="./week-7/">
+            Week 7 - Managing State 
           </Link>
         </li>
       </ul>
