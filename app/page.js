@@ -48,6 +48,12 @@ export default function Home() {
             Week 5 - Managed Forms
           </Link>
         </li>
+        <li>
+          <Link
+            className={linkStyles} href="./week-6/">
+            Week 6 - 
+          </Link>
+        </li>
       </ul>
     </main>
   );

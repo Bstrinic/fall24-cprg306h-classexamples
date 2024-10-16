@@ -23,26 +23,51 @@ export default function ContactForm() {
 
   const handlesubmit = (event) => {
     event.preventDefault();
+
+    let contactData = {
+      fName: fullName,
+      telnum: phone,
+      mail: email,
+      birthday: birthdate,
+      type: contactType,
+      msg: message,
+    };
+
+    alert(`
+        Name: ${contactData.fName} |
+        Phone: ${contactData.telnum} |
+        Email: ${contactData.mail} |
+        Birthday: ${contactData.birthday} |
+        Contact Type: ${contactData.type} |
+        Message: ${contactData.msg}
+        `)
+
+        setFullName("");
+        setPhone("");
+        setEmail("");
+        setBirthdate("");
+        setContactType("");
+        setMessage("");
   };
 
   // Each input has it's own div
   return (
-    <form onSubmit={handlesubmit}>
-      <div>
-        <label>Full Name: </label>
-        <input type="text" onChange={handleFullNameChange} />
+    <form className="bg-orange-300 p-4" onSubmit={handlesubmit}>
+      <div className="mb-3">
+        <label className=" inline-block w-40">Full Name: </label>
+        <input className="bg-slate-300 px-2 py-1 rounded border-gray-500 focus:bg-blue-300"type="text" onChange={handleFullNameChange} />
       </div>
-      <div>
-        <label>Phone Number: </label>
-        <input type="tel" onChange={handlePhoneChange} />
+      <div className="mb-3">
+        <label className=" inline-block w-40">Phone Number: </label>
+        <input className="bg-slate-300 px-2 py-1 rounded  border-gray-500  focus:bg-blue-300" type="tel" onChange={handlePhoneChange} />
       </div>
-      <div>
-        <label>Email Address: </label>
-        <input type="email" onChange={handleEmailChange} />
+      <div className="mb-3">
+        <label className=" inline-block w-40">Email Address: </label>
+        <input className="bg-slate-300 px-2 py-1 rounded  border-gray-500  focus:bg-blue-300" type="email" onChange={handleEmailChange} />
       </div>
-      <div>
-        <label>Birthdate: </label>
-        <input type="date" onChange={handleBirthdateChange} />
+      <div className="mb-3">
+        <label className=" inline-block w-40">Birthdate: </label>
+        <input className="bg-slate-300 px-2 py-1 rounded  border-gray-500  focus:bg-blue-300" type="date" onChange={handleBirthdateChange} />
       </div>
       {/* <div>
         <h2>Contact Type</h2>
@@ -56,9 +81,9 @@ export default function ContactForm() {
         </div>
       </div> */}
 
-      <div>
-        <label>Contact Type</label>
-        <select onChange={handleContactTypeChange}>
+      <div className="mb-3">
+        <label className=" inline-block w-40">Contact Type: </label>
+        <select className="bg-slate-300 px-2 py-1 rounded  border-gray-500  focus:bg-blue-300" onChange={handleContactTypeChange}>
           <option selected value="">
             Please select a contact type
           </option>
@@ -67,9 +92,9 @@ export default function ContactForm() {
         </select>
       </div>
 
-      <div>
-        <label>Message: </label>
-        <textarea onChange={handleMessageChange} ></textarea>
+      <div className="mb-3">
+        <label className=" inline-block w-40 align-top">Message: </label>
+        <textarea className="bg-slate-300 px-2 py-1 rounded  border-gray-500  focus:bg-blue-300" onChange={handleMessageChange}></textarea>
       </div>
 
       <div>
